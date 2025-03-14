@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dom-projects</title>
+    </head>
+    <body>
+    <p>Youtube subscribe button</p>
+    <button onclick = "subs()"
+    class = "subs-butt">subscribe</button>
+    <script>
+        function subs(){
+        const buttcontent = document.querySelector('.subs-butt');
+   
+
+if(buttcontent.innerHTML === 'subscribe'){
+    buttcontent.innerHTML = 'subscribed';
+}
+else{
+    buttcontent.innerHTML = 'subscribe';
+}
+        }
+        //an imp property is that if there is a space inside the button element it wont work like it did..so we use innerText to compare the text only
+    </script>
+     </body>
+    </html>
+
+
+    
