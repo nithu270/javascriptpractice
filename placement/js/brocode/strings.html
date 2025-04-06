@@ -1,0 +1,34 @@
+<script>//startsWith() , charAt(0) , endsWith() ,trim() ,
+//  .indexOf() , lastIndexOf() .length , 
+//.includes() , .replaceAll() , 
+//padStart(10,"0")  -> starts the string with 0 and also there is padEnd
+
+// In java we have s.substring in js we have s.slice()
+
+let name = "nithya shree";
+let fname = name.slice(0,name.indexOf(" "));
+let lname = name.slice(name.indexOf(" ")+2);
+console.log(lname);
+
+
+//by using this we are getting username from the email of the user
+</script>
+
+<script>
+// no method chaining
+let user = window.prompt("enter the username");
+user = user.trim();
+let fletter = user.charAt(0).toUpperCase();
+let balchar = user.slice(1);
+balchar = balchar.toLowerCase();
+alert(`${fletter}${balchar}`);
+
+// method chaining
+user = user.trim().charAt(0).toUpperCase()+user.trim().slice(1).toLowerCase();
+console.log(user);
+
+// =(assignment operator) , ==(equality) , ===(strict equality) , != , !==
+
+
+
+</script>

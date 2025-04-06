@@ -1,0 +1,52 @@
+.subs{
+    background-color: rgb(186, 36, 36);
+   color:white;
+   border : none;
+ height : 35px;
+ width : 105px;
+ border-radius :0px;
+ cursor:pointer;
+ margin-right: 10px;
+ transition: background-color 1s,color 1s;
+
+ 
+}
+.subs:hover{
+    background-color: rgb(227, 216, 231);
+    color:rgb(29, 102, 165);
+    padding: 20px;
+}
+.subs:active{
+    background-color: darkcyan;
+    color: white;
+}
+.join{
+    height: 30px;
+    width : 60px;
+    color:rgb(41, 118, 211);
+    border-color: rgb(41, 118, 211);
+    border-radius: 0px;
+    border-style: solid;
+    margin-right:10px;
+    background-color: white;
+}
+.join:hover{
+background-color: rgb(41, 118, 211);
+color:white;
+}
+.twee{
+    height:35px;
+    width:70px;
+    border-radius:20px;
+    background-color: rgb(41,118,211);
+    color : white;
+    font-weight: bold;
+    border-style:solid;
+    border:none;
+    cursor:pointer;
+     
+
+}
+.twee:hover{
+    box-shadow: 0px 10px 10px rgb(0, 0, 0,0.4);
+}
