@@ -1,0 +1,13 @@
+<script>
+    let min = 1;
+    let max = 5;
+    let rn = Math.floor(Math.random()*(max))+1;
+    let s = "true";
+    while(s){
+        let num = window.prompt("enter a num");
+        if(num==rn){
+           alert("wins");
+           s = "false";
+        }
+    }
+</script>

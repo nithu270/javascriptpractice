@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type ="checkbox" id = "subs">
+    <label for="subs">subscribe</label>
+        <br>
+        <input type ="radio" id = "visa">
+        <label for="visa">visa</label>
+            <input type ="radio" id = "mc">
+            <label for="mc">mastercard</label>
+                <input type ="radio" id = "pp">
+                <label for="pp">paypal</label>
+                    <br>
+            
+    <button onclick ="submit()" id = "sub">submit</button>
+    <label id = "text"></label>
+</body>
+
+<script>
+//we use checked property here 
+function submit(){
+    const subscribed = document.getElementById("subs");
+    const text = document.getElementById("text")
+if(subscribed.checked){
+document.getElementById("text").innerText= "you are subscribed";
+}
+else{
+    document.getElementById("text").innerText= "you are not subscribed"; 
+}
+}
+
+</script>
+</html>

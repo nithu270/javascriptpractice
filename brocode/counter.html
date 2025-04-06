@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter program</title>
+</head>
+<body>
+<p style="text-align:center;"id ="num">0</p>
+<br>
+<div class="btn-container">
+    <button onclick="dec()" id ="dec" class="btn">decrease</button>
+    <button onclick="res()" id ="reset" class="btn">reset</button>  
+    <button onclick="inc()" id="inc" class="btn">increase</button></div>
+
+<!-- 
+if u want to align these buttons in center use flex -->
+</body>
+<style>
+    .btn{
+     margin-right: 5px;
+    }
+    .btn-container{
+        display:flex;
+        justify-content: center;  /*wont work if u put those buttons in a div tag*/
+        
+    }
+</style>
+<script>
+    function dec(){
+      let var1 =  document.getElementById("num").innerText;
+      var1--;
+      document.getElementById("num").innerText = var1;
+    }
+    function res(){
+         document.getElementById("num").innerText=0;
+      
+} function inc(){
+    let var1 =  document.getElementById("num").innerText;
+    var1++;
+    document.getElementById("num").innerText = var1;
+}
+</script>
+</html>
