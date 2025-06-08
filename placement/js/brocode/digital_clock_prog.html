@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <p id = "clock">00:00:00</p>
+
+</body>
+</html>
+
+<script>
+    function clock(){
+        let meridiem = "AM";
+    const now = new Date()
+    let hours = now.getHours();
+    if(hours>=12){
+meridiem = "PM";
+    }
+    if(hours>12){
+hours = hours%12;
+    }
+    const mins = now.getMinutes();
+    const sec = now.getSeconds();
+    const time = `${hours}:${mins}:${sec} ${meridiem}`;
+    document.getElementById("clock").textContent = time;
+    }
+  
+setInterval(clock,1000);
+//unlike settimeout func which executes only 1 time..setinterval function will be executed again and again with the time interval of desired input.
+    </script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "box">
+        Click Me!
+    </div>
+</body>
+</html>
+<style>
+    #box{
+        background-color:chartreuse ;
+        height:80px;
+        width:70px;
+        font-size: medium;
+        font-weight: bold;
+        text-align: center;
+        display:flex; 
+       align-items:center;
+    }
+</style>
+<script>
+    //event - its an object that is provided by the browser when something happens
+    //mouseover ,click, mouseout;
+    const mybox = document.getElementById("box");
+    //.addEventListener(event , callback); or
+     //.addEventListener(event , function);
+      //.addEventListener(event , arrow);
+
+// function changecol(event){
+//     event.target.style.backgroundColor = "red";
+// }
+
+    mybox.addEventListener("click",event => {
+        event.target.style.color = "white";
+        event.target.textContent = "nice";
+    })
+    mybox.addEventListener("mouseover",event =>{
+       event.target.textContent = "ohh";
+    })
+mybox.addEventListener("mouseout",event =>{
+    event.target.textContent = "okiee";
+})
+//these are all mouse related events
+
+</script>

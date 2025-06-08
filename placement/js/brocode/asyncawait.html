@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //making tea would take 4 or 5 steps and each should wait for some time to execute 
+
+//async is used before function keyword and await is ised to hold on
+
+
+     // Task 1: Boil water (takes 2 seconds)
+     function boilWater() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve("Water boiled");
+        }, 2000);
+      });
+    }
+
+    // Task 2: Add tea powder (takes 1 second)
+    function addTea() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve("Tea powder added");
+        }, 1000);
+      });
+    }
+
+    // Async function that uses await
+    async function makeTea() {
+      const output = document.getElementById("output");
+      output.textContent = "Boiling water...";
+
+      const boiled = await boilWater();  // waits 2 sec
+      output.textContent = boiled;
+
+      const tea = await addTea();        // waits 1 sec
+      output.textContent = `${boiled}, then ${tea}`;
+    }
+</script>

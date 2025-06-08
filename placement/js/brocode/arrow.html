@@ -1,0 +1,35 @@
+<script>
+    function myfunc(a,b){
+return a*b; //without arrow
+    }
+
+    const add = (a,b) => a+b;
+    console.log(add(3,2));
+
+    const nums = [12,34,67,89];
+    const half = nums.map(function(num){
+        return num/2;
+    });
+    console.log(half);
+
+//with arrow
+const square = nums.map(num=>num*num);
+console.log(square);
+
+// without function exp
+setTimeout(greet,4000);
+function greet(){
+   console.log("hello");
+}
+//with func exp
+
+setTimeout(function(){   //we dont need a function name for a func exp
+   console.log("hello");
+},2000)
+//with arow func
+setTimeout(() =>console.log("hello") , 3000);
+
+const numbers = [1,2,3,4,5];
+const sqnums = numbers.map((number => number*number));
+console.log(sqnums);
+</script>

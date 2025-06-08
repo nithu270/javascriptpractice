@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "sw">00:00:00:00</p>
+    <button onclick = "start()">start</button>
+    <button onclick = "stop()">stop</button>
+    <button onclick = "reset()">reset</button>
+
+</body>
+<script>
+
+    let timer = null;
+    function stopwatch(){
+        const now = new Date();
+const hr = now.getHours();
+const min = now.getMinutes();
+const sec = now.getSeconds();
+const ms = now.getMilliseconds();
+if(hr<10){
+    hr = "0"+hr;
+}
+if(min<10){
+    min = "0"+min;
+}
+if(sec<10){
+    sec = "0"+sec;
+}
+document.getElementById("sw").textContent = `${hr}:${min}:${sec}:${ms}`;
+
+    }
+    function start(){
+       
+        timer = setInterval(stopwatch,1000);
+    }
+function stop(){
+    clearTimeout(timer);
+}
+function reset(){
+    document.getElementById("sw").textContent = "00:00:00:00";
+}
+
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type = "number" id = "num">
+    <button onclick ="myfunc()" id = "but">test</button>
+    <p id = "res"></p>
+</body>
+</html>
+<script>
+
+    //filter method is used to filter the array without changing the org array
+    const ages = [10,20,43,67,89,30,12,56];
+    function checkAge(age){
+        return age>document.getElementById("num").value;
+    }
+   function myfunc(){
+    document.getElementById("res").innerHTML= ages.filter(checkAge);
+   }
+</script>

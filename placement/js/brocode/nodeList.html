@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="butt1" class = "butt" class = "enable">button1</button>
+    <button id ="butt2" class = "butt">button2</button>
+    <button  id ="butt3" class = "butt">button3</button>
+    <button id ="butt4" class = "butt">button4</button>
+</body>
+</html>
+<style>
+   
+    .butt{
+        height:100px;
+        width:100px;
+        display : flex;
+        padding :10px 10px;
+        margin : 25px 25px;
+        font-size: medium;
+        background-color: rgb(123, 123, 194);
+        border:none;
+    }
+
+</style>
+<script>
+    //nodeList
+    const but = document.querySelectorAll(".butt");
+but.forEach(button => {
+   button.addEventListener("click" , event =>
+{
+    event.target.style.backgroundColor = "red";
+}
+   )
+})
+//classList - element property
+//allows you to add and remove css classes dynamically
+
+let button1 = document.getElementById("butt1");
+button1.addEventListener("click", event =>
+{
+    event.target.classList.remove("butt");
+}
+)
+
+</script>

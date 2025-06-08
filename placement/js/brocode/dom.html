@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class = "pa" id = "para">hello this is nithya</p>
+    <p class = "pa" id = "gm" >good mrng</p>
+    
+    <div>
+        coimbatore
+    </div>
+    <div>
+        gandhipuram
+    </div>
+</body>
+</html>
+
+<script>
+    //document.getElementById()
+    //document.getElementsByclassName()
+    //document.getElementsByTagName()
+    //document.querySelector()
+    //document.querySelectorAll()
+const parag = document.getElementById("para");
+parag.style.color = "blue";
+
+const classname = document.getElementsByClassName("pa");
+ //it will return a collection so
+
+//we should iterate
+for(let i =0;i<classname.length;i++){
+    classname[i].style.fontSize = "20px";
+    classname[i].style.color = "red";
+}
+const divi = document.getElementsByTagName("div");
+for(let i =0;i<divi.length;i++){
+    divi[i].style.backgroundColor = "red";
+}
+const q = document.querySelectorAll("p");
+for(let i =0;i<q.length;i++){
+    q[i].style.fontSize = "60px";
+}
+
+
+</script>

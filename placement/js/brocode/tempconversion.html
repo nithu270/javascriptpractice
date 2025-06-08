@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1 class = "head">Temperature conversion:</h1>
+    <br>
+    <input type = "text" id = "inp">
+    <br>
+    <input type = "radio" id = "ctof"  name="conversion">
+    <label>celcius to fahrenheit</label>
+    <br>
+    <input type = "radio" id = "ftoc" name="conversion">
+    <label>fahrenheit to celcius</label>
+    <br>
+<button type = "button" class = "but" onclick="convert()">submit</button> 
+<br>
+<!-- submit is an inbuilt method in js so dont use it as a function name and if u include button inside form just include the type  -->
+<p id="res"></p>
+    </form>
+    
+</body>
+<style>
+    .but{
+        margin-top:10px;
+        background-color: red;
+        border:none;
+        border-radius: 5px;
+        padding:10px;
+        color:white;
+    }
+    body{
+        background-color: rgb(180, 180, 180);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        background-color: aliceblue;
+       text-align: center;
+       width:400px;
+       border-radius: 10px;
+       height: 300px;
+     
+    }
+    #ctof{
+        margin-top: 10px;
+    }
+    #ftoc{
+        margin-top: 10px;
+    }
+    
+.head{
+color: cornflowerblue;
+width:100px;
+margin-left: 120px;
+margin-bottom: 5px;
+
+}
+</style>
+<script>
+function convert(){
+    let input = document.getElementById("inp").value;
+let ans;
+ let ctof = document.getElementById("ctof");
+ let ftoc = document.getElementById("ftoc");
+ if(ctof.checked){
+    ans = ((9/5)*input)+32;
+    document.getElementById("res").innerText = ans;
+ }
+ else if(ftoc.checked){
+    ans = (input-32)*(5/9);
+    document.getElementById("res").innerText = ans;
+ }
+ 
+}
+</script>
+</html>

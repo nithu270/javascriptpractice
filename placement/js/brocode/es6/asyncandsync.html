@@ -1,0 +1,16 @@
+<script>
+//sync code - the line of code should wait until the previous one executes
+//async code - this will not wait for a function or block of code to execute..as it is asynchoronous it will execute everythin concurrently
+
+//async
+function task(){
+  console.log("task1");
+}
+setTimeout(task,3000);
+console.log("task2");
+console.log("task3");
+//task2 and task3 wont wait for task1 
+
+
+
+</script>

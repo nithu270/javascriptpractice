@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "box1" class = "box">
+        box1
+    </div>
+    <div id = "box2" class = "box">
+        box2
+    </div>
+    <div id = "box3" class = "box">
+        box3
+    </div>
+    <div id = "box4" class = "box">
+        box4
+    </div>
+</body>
+</html>
+<style>
+    .box{
+        width:100%;
+        height:125px;
+      border:3px solid;
+      font-size: 20px;
+      font-weight: bold;
+    }
+</style>
+<script>
+     const newH1 = document.createElement("h1");
+     const nh2 = document.createElement("h2");
+     newH1.textContent ="hello world";
+     newH1.style.color = "red";
+     nh2.textContent = "hii";
+    
+     document.body.insertBefore(newH1,box4);
+     document.body.prepend(nh2);
+     document.body.insertBefore(nh2,box3);
+
+     //if the boxes dont have ids
+
+    //creates nodelist
+      const boxes = document.querySelectorAll(".box");
+        document.body.insertBefore(nh2,boxes[1]);
+        document.getElementById("box1").append(newH1);
+//remove the element 
+document.body.removeChild(nh2);
+</script>

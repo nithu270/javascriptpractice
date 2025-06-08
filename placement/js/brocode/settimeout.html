@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+ <head>
+        <title>
+            settimeout
+        </title>
+       </head>  
+       <button onclick="starttime()">
+        start
+       </button>
+       <button onclick = "cleartimer()">
+        clear
+       </button>
+    </body>
+<script>
+function startTimer(){
+   setTimeout(function() {window.alert("hello")}, 3000); 
+   console.log("started");
+}
+
+//setTimeout function will be used to execute a function after a time period it accepts two parameters callback function and a time
+
+//we can also clear the time we have set using clearTimeout function; which will take only one paramewter that is timeoutid 
+let timeoutid;
+function starttime(){
+    timeoutid = setTimeout(() => window.alert("mrng"),4000);
+}
+function cleartimer(){
+clearTimeout(timeoutid);
+console.log("cleared");
+}
+</script>
+</html>

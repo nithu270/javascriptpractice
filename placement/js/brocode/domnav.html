@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+      <h2 id = "tit" >Title</h2>
+      <h3>sibling</h3>
+      <p id="intro">Welcome to DOM Navigation</p>
+      <ul id = "fruits">
+       <li id = "apple">apple</li>
+       <li>banana</li>
+       <li id = "lichi">lichi</li>
+      </ul>
+      <ul id = "veg">
+        <li>carrot</li>
+        <li>brinj</li>
+        <li>beetroot</li>
+       </ul>
+       <ul id = "desserts">
+        <li>cake</li>
+        <li>icecream</li>
+        <li>chocolate</li>
+       </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    //dom navigation - process of nav through the structure of html through js
+     
+   //firstElementChild
+   //lastElementChild
+   //nextElementSibling
+   //previousElementSibling
+  //parentElement
+   //children
+ const unElements = document.querySelectorAll("ul"); //creates a nodelist
+unElements.forEach(unElement =>
+{
+  const lastele = unElement.lastElementChild;
+  lastele.style.color = "red";
+}
+)
+
+const unordereds = document.querySelectorAll("ul");
+unordereds.forEach(unordered =>{
+  const par = unordered.parentElement;
+  par.style.fontSize = "20px";
+})
+
+const ele = document.getElementById("lichi");
+const sib = ele.previousElementSibling;
+sib.style.color = "brown";
+
+const elements = document.querySelectorAll("ul");
+elements.forEach(element =>{
+  const elementsofveg = document.getElementById("veg");
+  const fele = elementsofveg.firstElementChild;
+  fele.style.color = "green";
+})
+//simple 
+
+const feleof_D = document.getElementById("desserts").firstElementChild;
+const sibling = feleof_D.nextElementSibling;
+sibling.style.fontSize = "50px";
+
+const fruit = document.getElementById("fruits").lastElementChild;
+fruit.previousElementSibling.style.fontWeight = "bold";
+
+
+
+ const pare = document.getElementById("tit");
+pare.nextElementSibling.style.textDecoration = "underline";
+
+const d_list = document.getElementById("desserts");
+const arr = Array.from(d_list.children);
+for(let i =0;i<arr.length;i++){
+  arr[i].style.color = "yellow";
+}
+const parent = document.getElementById("container");
+parent.lastElementChild.style.fontSize = "80px";
+
+const vege = document.getElementById("veg");
+const childrenofveg = vege.children;
+childrenofveg[1].style.color = "pink";
+</script>

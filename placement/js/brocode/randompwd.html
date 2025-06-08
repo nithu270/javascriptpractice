@@ -1,0 +1,29 @@
+<script>
+    const lower = true;
+    const upper = true;
+    const num = true;
+    const spl = true;
+    const len = 12;
+    const pwd = genpwd(lower,upper,num,spl,len);
+console.log(pwd);
+    function genpwd(lower,upper,num,spl,len){
+        let allowedpwd="";
+        let res="";
+            const lowercase = "abcdefghijklmnopqrstuvwxyz";
+            const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const number= "1234567890";
+            const splchar = "!@#$%^&*?";
+            if(len==0){
+                console.log("len should be greater than 0");
+            }
+            allowedpwd+=lower?lowercase:"";
+            allowedpwd+=uppercase?upper:"";
+            allowedpwd+=num?number:"";
+            allowedpwd+=spl?splchar:"";
+            for(let i =0;i<len;i++){
+              let randomind = (Math.floor(Math.random()*allowedpwd.length))+1;
+              res+=allowedpwd[randomind];
+            }
+               return res;
+    }
+</script>

@@ -1,0 +1,23 @@
+<script>
+    const person1 = {
+        fname : "nithya",
+        lname : "shree",
+        favfood : "biriyani",
+        sayhello : function(){ console.log(`hello i am ${this.fname} ${this.lname} and my favfood is ${this.favfood}`) //this keyword refers to the current object (person1 here) calling the sayhello method
+        }
+    }
+person1.sayhello();
+</script>
+<script>
+    const date = new Date(); // Create a Date object first!
+
+    let yr = date.getFullYear();
+    console.log(yr);  // prints current year (e.g., 2025)
+
+    const year = date.setFullYear(2029);
+    console.log(year); // prints the timestamp (milliseconds after 1970)
+</script>
+
+
+
+

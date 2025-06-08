@@ -1,0 +1,22 @@
+<script>
+    //callback is a function that is passed as an arg to an other function
+//this is like telling our script to do the next job 
+
+//normal method 
+//with callbacks we send this function to the greet function
+
+//callbacks are useful when we want to execute another function and dont know when will the prev function will complete
+</script>
+
+<script>
+  function one(){
+    console.log("function one");
+  }
+    function two(callback){
+        console.log("function two");
+        setTimeout(callback,3000); // after 3 secs the function one will execute
+    }
+    two(one);
+    
+  
+</script>
