@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id = "bod">
     <p id = "head">Welcome</p>
     <label>username:</label>
     <input id="input" type = "text" >
@@ -16,7 +16,7 @@
 <script>
     function sub(){
         let username = document.getElementById("input").value;
-        document.getElementById("head").innerText = `Hello ${username}`;
+        document.getElementById("bod").innerText = `Hello ${username}`;
     }
 </script>
 
