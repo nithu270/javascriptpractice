@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "square">
+    </div>
+    <div class ="service">
+        <p>satisfied with our service?</p>
+   <button>yes</button>
+        <button>no</button>
+    </div>
+
+    <div class = "tweet">
+        <img class = "cat" src ="cat.jpeg">
+        <p class="text">what's happening?</p>
+        <button style ="border-radius: 30px; width:60px; 
+        height:30px; margin:10px; 
+        background-color:cornflowerblue; 
+        border:none">tweet</button>
+    </div>
+</body>
+</html>
+<style>
+    .square{
+        background-color: red;
+        border-radius: 0px;
+        width:100px;
+        height:100px;
+    }
+.square:hover{
+     background-color: green;
+    border-radius: 50px;
+    transition: background-color 3s,border-radius 2s;
+}
+
+.service{
+    margin : 20px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(255, 255, 255);
+    padding:10px;
+    width:200px;
+}
+.tweet{
+display:flex;
+border-style: solid;
+border-width: 1px;
+border:none;
+border-color: rgb(116, 116, 114);
+width:400px;
+height: 60px;
+padding:10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+.text{
+    padding-left:10px;
+    padding-right:120px;
+}
+.cat{
+    border-radius:30px;
+   border-width: 50px; 
+   margin-left:10px;
+   width:50px;
+   height:50px;
+}
+</style>
